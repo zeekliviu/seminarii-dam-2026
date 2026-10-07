@@ -47,6 +47,11 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        binding.fabAdauga.setOnClickListener(view -> {
+            Intent intent = new Intent(this, AddActivity.class);
+            startActivity(intent);
+        });
+
         Log.d(TAG, "s-a apelat onCreate");
     }
 
