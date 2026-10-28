@@ -26,6 +26,17 @@
 <!--        app:layout_constraintTop_toBottomOf="@id/tvHello"-->
 <!--         />-->
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:id="@+id/toolbar"
+        app:title="@string/app_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
     <ListView
         android:id="@+id/lvAbonamente"
         android:layout_width="0dp"
@@ -33,7 +44,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_bnr"
+        android:title="Curs BNR"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/action_despre"
+        android:title="Despre"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/action_total_persoane"
+        android:title="Total persoane"
+        app:showAsAction="never"
+        />
+</menu>
