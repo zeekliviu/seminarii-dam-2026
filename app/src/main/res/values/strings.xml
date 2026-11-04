@@ -6,4 +6,6 @@
     <string name="pret">Pret</string>
     <string name="cantitate">Cantitate</string>
     <string name="data_publicare">Data publicare</string>
+    <string name="eur">EUR:</string>
+    <string name="usd">USD:</string>
 </resources>

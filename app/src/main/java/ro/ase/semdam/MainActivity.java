@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         if(id == R.id.action_bnr)
         {
-            Toast.makeText(this, "Curs BNR: va urma...", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, BnrActivity.class));
             return true;
         }
         if(id == R.id.action_despre)
