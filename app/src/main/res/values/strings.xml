@@ -3,4 +3,7 @@
     <string name="salut_1088">Salut, 1088!</string>
     <string name="nume">Nume</string>
     <string name="observatii">Observatii</string>
+    <string name="eur">EUR:</string>
+    <string name="usd">USD:</string>
+    <string name="actualizeaza">Actualizeaza</string>
 </resources>

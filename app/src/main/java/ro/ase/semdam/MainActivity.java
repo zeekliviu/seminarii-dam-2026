@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if(id == R.id.action_bnr)
         {
-            Toast.makeText(this, "Curs BNR: ", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, BnrActivity.class));
             return true;
         }
         if(id == R.id.action_total_persoane)
