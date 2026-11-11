@@ -18,4 +18,12 @@
         android:title="Total stoc"
         app:showAsAction="never"
         />
+
+    <item android:id="@+id/action_json"
+        android:title="Incarca JSON"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_ultima"
+        android:title="Ultima incarcare"
+        app:showAsAction="never"/>
 </menu>

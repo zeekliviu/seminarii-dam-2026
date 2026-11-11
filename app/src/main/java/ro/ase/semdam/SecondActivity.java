@@ -1,6 +1,8 @@
 package ro.ase.semdam;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,10 @@ public class SecondActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        SharedPreferences prefs = getSharedPreferences("setari_semdam", MODE_PRIVATE);
+        int n = prefs.getInt("nr_incarcate", -1);
+        TextView tvIncarcare = findViewById(R.id.tvUltimaIncarcare);
+        tvIncarcare.setText("Ultima incarcare: " + n);
     }
 }
