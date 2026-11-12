@@ -2,7 +2,10 @@ package ro.ase.semdam;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -22,10 +25,13 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import ro.ase.semdam.adapters.CustomAdapter;
 import ro.ase.semdam.databinding.ActivityMainBinding;
 import ro.ase.semdam.domeniu.Abonament;
+import ro.ase.semdam.json.IncarcareJson;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Abonament> abonamente = new ArrayList<>();
     private ArrayAdapter<Abonament> adapter;
+
+    private ExecutorService executor;
+    private Handler mainHandler;
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -65,6 +74,40 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, String.valueOf(total), Toast.LENGTH_SHORT).show();
             return true;
         }
+        if(id == R.id.action_json)
+        {
+            executor.execute(() -> {
+                try {
+                    String text = IncarcareJson.descarca();
+                    List<Abonament> citite = IncarcareJson.dinText(text);
+                    mainHandler.post(() -> {
+                        abonamente.clear();
+                        abonamente.addAll(citite);
+                        int nrActive = 0;
+                        for(Abonament a : citite)
+                        {
+                            if(a.isActiv())
+                                nrActive++;
+                        }
+                        SharedPreferences prefs = getSharedPreferences("setari_semdam", MODE_PRIVATE);
+                        prefs.edit()
+                                        .putInt("nr_incarcate", citite.size())
+                                        .putInt("nr_active", nrActive)
+                                                .apply();
+                        adapter.notifyDataSetChanged();
+                        Toast.makeText(this, "Incarcat: " + citite.size(), Toast.LENGTH_LONG).show();
+                    });
+                } catch (Exception e) {
+                    mainHandler.post(() -> Toast.makeText(this, "Eroare JSON: " + e.getMessage(), Toast.LENGTH_LONG).show());
+                }
+            });
+            return true;
+        }
+        if(id == R.id.action_ultima)
+        {
+            startActivity(new Intent(this, SecondActivity.class));
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -77,6 +120,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         setSupportActionBar(binding.toolbar);
+
+        executor = Executors.newSingleThreadExecutor();
+        mainHandler = new Handler(Looper.getMainLooper());
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.main, (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -151,6 +197,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Log.d(TAG, "s-a apelat onCreate");
+
+        SharedPreferences prefsDeschidere = getSharedPreferences("setari_semdam", MODE_PRIVATE);
+        int nrActiveSalvat = prefsDeschidere.getInt("nr_active", 0);
+        Toast.makeText(this, "Ultima incarcare: " + nrActiveSalvat, Toast.LENGTH_SHORT).show();
     }
 
     @Override
