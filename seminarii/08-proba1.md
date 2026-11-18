@@ -1,6 +1,6 @@
 # 08 - Proba practică 1
 
-Ponderea și condițiile sunt în [README](../README.md): **15%** din nota finală, **prezență fizică** în laborator (săptămâna **8**). Enunțul și parola arhivei se comunică **live, la oră**.
+Ponderea și condițiile sunt în [README](../README.md): **15%** din nota finală, **prezență fizică**, pe calculatoarele din laborator (săptămâna **8**). Parola arhivei se comunică **live, la oră**.
 
 ## Ce trebuie să știți dinainte
 
@@ -16,14 +16,14 @@ Lucrați pe un **schelet Android** (proiect Gradle) pe care îl primiți ca arhi
 ### 2. După restart / modul examen
 
 1. Primiți **parola** arhivei live.
-2. Dezarhivați pe ThawSpace (sau unde vi se indică la oră) cu **7‑Zip** / WinRAR (zip cu AES; Explorer poate eșua).
+2. Dezarhivați pe ThawSpace (sau unde vi se indică la oră) cu **7‑Zip** / WinRAR.
 3. Rulați **`START-EXAMEN.bat`** din rădăcina arhivei (setează `GRADLE_USER_HOME` local și deschide Android Studio pe proiect).
 4. În Android Studio: **Settings → Build, Execution, Deployment → Gradle → Offline work** = ON.
 5. Sync / Build. Lucrați **doar** din acest proiect; nu contați pe download Gradle de pe internet.
 
 ### 3. În timpul probei
 
-- Enunțul e pe foaie / ecran, la oră.
+- Enunțul e în **`ENUNT.md`** (în proiectul din arhivă).
 - Nu aveți USB, Wi‑Fi sau net în afara Moodle (`online.ase.ro`).
 - Păstrați proiectul pe ThawSpace ca să nu îl pierdeți.
 
@@ -39,7 +39,7 @@ La finalul timpului de lucru:
 
 ## Ce se evaluează
 
-Cerințele concrete (model, validare, parse, UI etc.) sunt în enunțul de la oră. Punctajul maxim al variantei de grupă este **10 puncte**; detaliile de barem se anunță odată cu enunțul.
+Cerințele concrete (model, validare, parse, UI etc.) sunt în **`ENUNT.md`**. Punctajul maxim al variantei de grupă este **10 puncte**; baremul e în același fișier.
 
 ## Checklist rapid
 
