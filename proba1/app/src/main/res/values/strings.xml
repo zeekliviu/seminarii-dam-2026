@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rezervări Săli ASE App</string>
+    <string name="adauga">Adaugă</string>
+    <string name="titlu">Titlu</string>
+    <string name="observatii">Observații</string>
+    <string name="pret">Preț (RON)</string>
+    <string name="nr_ore">Nr. ore</string>
+    <string name="confirmata">Confirmată</string>
+    <string name="neconfirmata">Neconfirmată</string>
+    <string name="data_rezervare">Data rezervare (yyyy-MM-dd)</string>
+    <string name="salveaza">Salvează</string>
+</resources>

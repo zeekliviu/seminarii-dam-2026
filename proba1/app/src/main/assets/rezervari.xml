@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rezervari>
+    <rezervare>
+        <titlu>Sala examen DAM</titlu>
+        <observatii>Sesiunea de iarna 2026</observatii>
+        <pret>250.0</pret>
+        <nrOre>3</nrOre>
+        <tipSala>Amfiteatru</tipSala>
+        <confirmata>true</confirmata>
+        <dataRezervare>2026-11-01</dataRezervare>
+    </rezervare>
+    <rezervare>
+        <titlu>Laborator C201</titlu>
+        <observatii></observatii>
+        <pret>100.0</pret>
+        <nrOre>2</nrOre>
+        <tipSala>Laborator</tipSala>
+        <confirmata>false</confirmata>
+        <dataRezervare>2026-10-20</dataRezervare>
+    </rezervare>
+    <rezervare>
+        <titlu>Sală curs B101</titlu>
+        <observatii>Seminar DAM grupa 1086</observatii>
+        <pret>150.0</pret>
+        <nrOre>2</nrOre>
+        <tipSala>Sală curs</tipSala>
+        <confirmata>false</confirmata>
+        <dataRezervare>2026-10-15</dataRezervare>
+    </rezervare>
+    <rezervare>
+        <titlu>Amfiteatru mare</titlu>
+        <observatii>Prezentare proiecte an 3</observatii>
+        <pret>500.0</pret>
+        <nrOre>4</nrOre>
+        <tipSala>Amfiteatru</tipSala>
+        <confirmata>true</confirmata>
+        <dataRezervare>2026-11-10</dataRezervare>
+    </rezervare>
+</rezervari>
