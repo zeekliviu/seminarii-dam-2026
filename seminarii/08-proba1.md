@@ -41,6 +41,15 @@ La finalul timpului de lucru:
 
 Cerințele concrete (model, validare, parse, UI etc.) sunt în **`ENUNT.md`**. Punctajul maxim al variantei de grupă este **10 puncte**; baremul e în același fișier.
 
+## Soluție (intended path)
+
+După oră, soluția completă — același proiect ca la probă, cu **codul rezolvat** și **aceleași teste** — e pe branch-ul grupei, în folderul `proba1/` (proiect separat de aplicația SemDAM din rădăcină; în Android Studio: **Open** pe `proba1/`):
+
+- [1086 — `grupa/1086/proba1`](https://github.com/zeekliviu/seminarii-dam-2026/tree/grupa/1086/proba1)
+- [1088 — `grupa/1088/proba1`](https://github.com/zeekliviu/seminarii-dam-2026/tree/grupa/1088/proba1)
+
+Tag-uri: `Proba1-solutie-grupa1086`, `Proba1-solutie-grupa1088`.
+
 ## Checklist rapid
 
 - [ ] Arhiva e pe **ThawSpace** înainte de lockdown
