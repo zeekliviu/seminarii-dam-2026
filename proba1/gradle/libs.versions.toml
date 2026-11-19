@@ -1,0 +1,21 @@
+[versions]
+agp = "9.1.1"
+desugar_jdk_libs = "2.1.5"
+junit = "4.13.2"
+appcompat = "1.8.0"
+material = "1.14.0"
+activityKtx = "1.13.0"
+constraintlayout = "2.2.2"
+orgJson = "20240303"
+
+[libraries]
+desugar_jdk_libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar_jdk_libs" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity-ktx = { group = "androidx.activity", name = "activity-ktx", version.ref = "activityKtx" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+org-json = { group = "org.json", name = "json", version.ref = "orgJson" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }

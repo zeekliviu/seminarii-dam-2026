@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cheltuieli Student</string>
+    <string name="adauga">Adaugă</string>
+    <string name="denumire">Denumire</string>
+    <string name="nota">Notă</string>
+    <string name="suma">Sumă (RON)</string>
+    <string name="nr_rate">Nr. rate</string>
+    <string name="platita">Plătită</string>
+    <string name="neplatita">Neplătită</string>
+    <string name="data_cheltuiala">Data cheltuială (yyyy-MM-dd)</string>
+    <string name="salveaza">Salvează</string>
+</resources>
